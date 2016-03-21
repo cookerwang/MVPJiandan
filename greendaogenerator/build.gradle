@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+    maven{ url 'http://maven.oschina.net/content/groups/public/'}
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'de.greenrobot:greendao-generator:2.1.0'
+}
+
+artifacts {
+    archives jar
+}
